@@ -16,6 +16,7 @@ function ReportContainer() {
   for (let i = 0; i < tweet.tweet.length; i++) {
     sendTweetId.push(tweet.tweet[i].tweetId); 
   }
+
   useEffect(() => {
     async function get() {
       const config = {
@@ -25,6 +26,7 @@ function ReportContainer() {
       // https://38fa5e0d-5b04-4db0-bb06-d41907bb60ac.mock.pstmn.io
       // http://15.165.149.176:8080/tweets/${imageId}/accountInfo
       const imageId = sendTweetId.join();
+
       const getNetworkData = await axios
         .get(`http://15.165.149.176:8080/tweets/${imageId}/accountInfo`, config)
         .then((res) => {

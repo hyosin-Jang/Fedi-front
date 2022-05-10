@@ -41,7 +41,6 @@ function ResultCard({
   const handleClick = (e: any) => {
     e.preventDefault();
     const tweetId = e.target.id;
-    console.log('tweetId', tweetId);
     clicked
       ? onUnselect(parseInt(tweetId, 10))
       : onSelect(parseInt(tweetId, 10));
